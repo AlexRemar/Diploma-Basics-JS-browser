@@ -3,7 +3,10 @@
  * отображения счетов в боковой колонке
  * */
 
+
+
 class AccountsWidget {
+  
   /**
    * Устанавливает текущий элемент в свойство element
    * Регистрирует обработчики событий с помощью
@@ -13,8 +16,13 @@ class AccountsWidget {
    * Если переданный элемент не существует,
    * необходимо выкинуть ошибку.
    * */
-  constructor( element ) {
-
+  constructor(element) {
+    if(!element){
+      throw new Error('Error');
+    }
+    this.element = element;
+    this.registerEvents();
+    this.update();
   }
 
   /**
@@ -25,7 +33,16 @@ class AccountsWidget {
    * вызывает AccountsWidget.onSelectAccount()
    * */
   registerEvents() {
-
+    const createAccount = this.element.querySelector('.create-account')
+    createAccount.addEventListener('click', function(e){
+      e.preventDefault();
+      App.getModal('newAccount').open();
+    });
+    for(let account of this.element.querySelectorAll('.account'))
+    account.querySelector('a').addEventListener('click', function(e){
+      e.preventDefault();
+      this.onSelectAccount(account)
+    })
   }
 
   /**
@@ -38,8 +55,19 @@ class AccountsWidget {
    * Отображает список полученных счетов с помощью
    * метода renderItem()
    * */
-  update() {
 
+  update() {
+    if(User.current()){
+      Account.list(id, function(err,response){
+        if(err){
+          alert(JSON.stringify(err))
+        }
+        if (response.success){
+          this.clear();
+        } 
+        this.renderItem() 
+      });
+    }
   }
 
   /**
@@ -48,7 +76,9 @@ class AccountsWidget {
    * в боковой колонке
    * */
   clear() {
-
+    for (const account of this.element.querySelectorAll('.account')){
+      account.remove()
+    }
   }
 
   /**
@@ -58,8 +88,14 @@ class AccountsWidget {
    * счёта класс .active.
    * Вызывает App.showPage( 'transactions', { account_id: id_счёта });
    * */
-  onSelectAccount( element ) {
+  onSelectAccount(element) {
+    const previousElement = this.element.querySelector('.active')
+    if(previousElement){
+      previousElement.classList.remove('active');
+      element.classList.add('active')
+    }
 
+    App.showPage('transactions', {account_id: element.dataset.id})
   }
 
   /**
@@ -68,7 +104,12 @@ class AccountsWidget {
    * item - объект с данными о счёте
    * */
   getAccountHTML(item){
-
+    return `<li class="active account" data-id="${item.id}">
+      <a href="#">
+        <span>${item.name}</span> /
+        <span>${item.sum}</span>
+      </a>
+        </li>`
   }
 
   /**
@@ -78,6 +119,12 @@ class AccountsWidget {
    * и добавляет его внутрь элемента виджета
    * */
   renderItem(data){
+    const container = document.createElement('div')
+    container.innerHTML = this.getAccountHTML(item);
 
+    // Не могу понять как получить массив с информацией о счетах
+
+
+    //this.element.appendChild()
   }
 }
