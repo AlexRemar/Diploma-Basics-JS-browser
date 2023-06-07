@@ -23,6 +23,105 @@
     },
     {
       "id": "2292i2cglhnvv4mc"
+    },
+    {
+      "id": "2292i9awli1fmm9k"
+    },
+    {
+      "id": "2292i62kli1fmohp"
+    },
+    {
+      "id": "2292ic8oli1fn7a9"
+    },
+    {
+      "id": "2292i4dwli1g6oh2"
+    },
+    {
+      "id": "2292ie48li1g82ab"
+    },
+    {
+      "id": "2292i968li1gh254"
+    },
+    {
+      "id": "2292i3lgli1grl8u"
+    },
+    {
+      "id": "2292ie4wli1grsuo"
+    },
+    {
+      "id": "2292i4cgli1gvg6a"
+    },
+    {
+      "id": "2292icjgli1jmok2"
+    },
+    {
+      "id": "2292ij8li1jpp7v"
+    },
+    {
+      "id": "2292ie38li1k5n2s"
+    },
+    {
+      "id": "2292ie6sli1kdvfm"
+    },
+    {
+      "id": "2292i5koli1kew07"
+    },
+    {
+      "id": "2292i8p8li1kg7r2"
+    },
+    {
+      "id": "2292id6gli1lgjy4"
+    },
+    {
+      "id": "2292ie1sli1lirel"
+    },
+    {
+      "id": "2292i9ukli1ljpvm"
+    },
+    {
+      "id": "2292i7zwli1llljo"
+    },
+    {
+      "id": "2292ibqwli1ln5j7"
+    },
+    {
+      "id": "2292i1p8li1nreuo"
+    },
+    {
+      "id": "2292i93sli1nuhwu"
+    },
+    {
+      "id": "2292i4o4li1nv1ka"
+    },
+    {
+      "id": "2292i1f0li1nvfqm"
+    },
+    {
+      "id": "2292i8voli1nwm5m"
+    },
+    {
+      "id": "2292idd4li1nwymh"
+    },
+    {
+      "id": "2292i4nkli1nxb3f"
+    },
+    {
+      "id": "2292i7u0li1ny5dd"
+    },
+    {
+      "id": "2292i8jsli1ojcvr"
+    },
+    {
+      "name": "Вася",
+      "email": "oleg@demo.ru",
+      "password": "demo",
+      "id": "2292i5mklik6y767"
+    },
+    {
+      "name": "Oleg",
+      "email": "vasya@demo.ru",
+      "password": "demo",
+      "id": "2292ifuwliks4wi5"
     }
   ],
   "accounts": [
@@ -56,6 +155,311 @@
     {
       "user_id": "2292i8uolhnvljbs",
       "id": "2292i2cglhnvv4n7"
+    },
+    {
+      "user_id": "2292i2cglhnvv4mc",
+      "id": "2292i1uglhs4f49z"
+    },
+    {
+      "user_id": "2292i2cglhnvv4mc",
+      "id": "2292ibtglhs4ovyd"
+    },
+    {
+      "user_id": "2292i2cglhnvv4mc",
+      "id": "2292i18glhs4vn0h"
+    },
+    {
+      "user_id": "2292i2cglhnvv4mc",
+      "id": "2292iae0lhs4y21h"
+    },
+    {
+      "user_id": "2292i2cglhnvv4mc",
+      "id": "2292ibg8lhs5dduu"
+    },
+    {
+      "user_id": "2292i2cglhnvv4mc",
+      "id": "2292i6k4lhs5ivuq"
+    },
+    {
+      "user_id": "2292i2cglhnvv4mc",
+      "id": "2292i8pslhs5kjin"
+    },
+    {
+      "user_id": "2292i2cglhnvv4mc",
+      "id": "2292ibe0lhs5l4ng"
+    },
+    {
+      "user_id": "2292i2cglhnvv4mc",
+      "id": "2292i9xclhs5p1gb"
+    },
+    {
+      "user_id": "1",
+      "id": "2292i7dclhs5y6ij"
+    },
+    {
+      "user_id": "1",
+      "id": "2292i5gclhs5yfj7"
+    },
+    {
+      "user_id": "1",
+      "id": "2292i6jsli034d1t"
+    },
+    {
+      "user_id": "1",
+      "id": "2292i9awli1fmmbh"
+    },
+    {
+      "user_id": "2292i9awli1fmm9k",
+      "id": "2292i62kli1fmoip"
+    },
+    {
+      "user_id": "2292i62kli1fmohp",
+      "id": "2292ic8oli1fn7c2"
+    },
+    {
+      "user_id": "2292ic8oli1fn7a9",
+      "id": "2292i4dwli1g6oiy"
+    },
+    {
+      "user_id": "2292i4dwli1g6oh2",
+      "id": "2292ie48li1g82b9"
+    },
+    {
+      "user_id": "2292ie48li1g82ab",
+      "id": "2292i968li1gh26h"
+    },
+    {
+      "user_id": "2292ie4wli1grsuo",
+      "id": "2292i4cgli1gvg7q"
+    },
+    {
+      "user_id": "2292ie6sli1kdvfm",
+      "id": "2292i5koli1kew1p"
+    },
+    {
+      "user_id": "2292i5koli1kew07",
+      "id": "2292i8p8li1kg7s0"
+    },
+    {
+      "user_id": "2292i8p8li1kg7r2",
+      "id": "2292id6gli1lgjzz"
+    },
+    {
+      "user_id": "2292id6gli1lgjy4",
+      "id": "2292ie1sli1lirgh"
+    },
+    {
+      "user_id": "2292ie1sli1lirel",
+      "id": "2292i9ukli1ljpwb"
+    },
+    {
+      "user_id": "2292i9ukli1ljpvm",
+      "id": "2292i7zwli1lllko"
+    },
+    {
+      "user_id": "2292i7zwli1llljo",
+      "id": "2292ibqwli1ln5jz"
+    },
+    {
+      "user_id": "2292ibqwli1ln5j7",
+      "id": "2292i1p8li1nrew1"
+    },
+    {
+      "user_id": "2292i1p8li1nreuo",
+      "id": "2292i93sli1nuhy0"
+    },
+    {
+      "user_id": "2292i93sli1nuhwu",
+      "id": "2292i4o4li1nv1l2"
+    },
+    {
+      "user_id": "2292i4o4li1nv1ka",
+      "id": "2292i1f0li1nvfrk"
+    },
+    {
+      "user_id": "2292i1f0li1nvfqm",
+      "id": "2292i8voli1nwm6f"
+    },
+    {
+      "user_id": "2292i8voli1nwm5m",
+      "id": "2292idd4li1nwyn7"
+    },
+    {
+      "user_id": "2292idd4li1nwymh",
+      "id": "2292i4nkli1nxb4a"
+    },
+    {
+      "user_id": "2292i4nkli1nxb3f",
+      "id": "2292i7u0li1ny5en"
+    },
+    {
+      "user_id": "2292i7u0li1ny5dd",
+      "id": "2292i8jsli1ojcxh"
+    },
+    {
+      "user_id": "2292i8jsli1ojcvr",
+      "id": "2292i1lcli1to0jp"
+    },
+    {
+      "user_id": "2292i8jsli1ojcvr",
+      "id": "2292i19gli1ttfk3"
+    },
+    {
+      "user_id": "2292i8jsli1ojcvr",
+      "id": "2292i8m0li1ttrm2"
+    },
+    {
+      "user_id": "2292i8jsli1ojcvr",
+      "id": "2292ialgli1tu585"
+    },
+    {
+      "user_id": "2292i8jsli1ojcvr",
+      "id": "2292i1s4li1tuule"
+    },
+    {
+      "user_id": "2292i8jsli1ojcvr",
+      "id": "2292i80cli1tvfa0"
+    },
+    {
+      "user_id": "2292i8jsli1ojcvr",
+      "id": "2292i750li1u9yn1"
+    },
+    {
+      "user_id": "2292i8jsli1ojcvr",
+      "id": "2292i7rcli1ub6ne"
+    },
+    {
+      "user_id": "2292i8jsli1ojcvr",
+      "id": "2292i78kli1udtu8"
+    },
+    {
+      "user_id": "2292i8jsli1ojcvr",
+      "id": "2292i9lkli1uku3t"
+    },
+    {
+      "user_id": "2292i8jsli1ojcvr",
+      "id": "2292i70sli1ul3n5"
+    },
+    {
+      "user_id": "2292i8jsli1ojcvr",
+      "id": "2292iavwli1ul8i6"
+    },
+    {
+      "user_id": "2292i8jsli1ojcvr",
+      "id": "2292i4hcli1umk0a"
+    },
+    {
+      "user_id": "2292i8jsli1ojcvr",
+      "id": "2292ibp4li1unm3t"
+    },
+    {
+      "user_id": "2292i8jsli1ojcvr",
+      "id": "2292ia74li1uo19v"
+    },
+    {
+      "user_id": "2292i8jsli1ojcvr",
+      "id": "2292ice4li1uorf0"
+    },
+    {
+      "user_id": "2292i8jsli1ojcvr",
+      "id": "2292i2akli1uppn5"
+    },
+    {
+      "user_id": "2292i8jsli1ojcvr",
+      "id": "2292i4ncli29qb51"
+    },
+    {
+      "user_id": "2292i8jsli1ojcvr",
+      "id": "2292ib3gli3o9cxg"
+    },
+    {
+      "user_id": "2292i8jsli1ojcvr",
+      "id": "2292iehsli8lok6a"
+    },
+    {
+      "user_id": "2292i8jsli1ojcvr",
+      "id": "2292i7f8lik08u8x"
+    },
+    {
+      "user_id": "2292i8jsli1ojcvr",
+      "id": "2292i4tklik0e3f6"
+    },
+    {
+      "user_id": "2292i8jsli1ojcvr",
+      "id": "2292i8kolik0q0g9"
+    },
+    {
+      "user_id": "2292i8jsli1ojcvr",
+      "id": "2292ieiwlik0xuf3"
+    },
+    {
+      "user_id": "2292i8jsli1ojcvr",
+      "id": "2292ieiwlik1ltla"
+    },
+    {
+      "user_id": "2292i8jsli1ojcvr",
+      "id": "2292iax0lik1okmc"
+    },
+    {
+      "user_id": "2292i8jsli1ojcvr",
+      "id": "2292i394lik1snuf"
+    },
+    {
+      "user_id": "2292i8jsli1ojcvr",
+      "id": "2292ideclik1ugmj"
+    },
+    {
+      "user_id": "2292i8jsli1ojcvr",
+      "id": "2292ig1clik1w8xu"
+    },
+    {
+      "user_id": "2292i8jsli1ojcvr",
+      "id": "2292id9wlik21ta1"
+    },
+    {
+      "user_id": "2292i8jsli1ojcvr",
+      "id": "2292ixolik45j85"
+    },
+    {
+      "user_id": "2292i8jsli1ojcvr",
+      "id": "2292i4q0lik45nph"
+    },
+    {
+      "user_id": "2292i8jsli1ojcvr",
+      "id": "2292id3wlik47m4q"
+    },
+    {
+      "user_id": "2292i8jsli1ojcvr",
+      "id": "2292iewclik4dam3"
+    },
+    {
+      "user_id": "2292i8jsli1ojcvr",
+      "id": "2292ibi0lik4epmw"
+    },
+    {
+      "user_id": "2292i8jsli1ojcvr",
+      "id": "2292i8y4lik4g00r"
+    },
+    {
+      "user_id": "2292i8jsli1ojcvr",
+      "id": "2292ifrglik4gysz"
+    },
+    {
+      "user_id": "2292i8jsli1ojcvr",
+      "id": "2292i8polik4ju7p"
+    },
+    {
+      "user_id": "2292i8jsli1ojcvr",
+      "id": "2292ia7clik6h8jk"
+    },
+    {
+      "user_id": "2292i8jsli1ojcvr",
+      "id": "2292i3xglik6ktgn"
+    },
+    {
+      "name": "вав",
+      "user_id": "2292i8jsli1ojcvr",
+      "id": "2292i9w0lik6xq8g"
     }
   ],
   "transactions": [
@@ -193,6 +597,24 @@
       "sum": 300000,
       "type": "expense",
       "user_id": "1"
+    },
+    {
+      "id": "2292i9uolikpd5jd",
+      "type": "income",
+      "name": "сууаы",
+      "sum": 600,
+      "account_id": "2292ieb8likpbufn",
+      "user_id": "2292i5mklik6y767",
+      "created_at": "2023-06-06T19:57:35.688Z"
+    },
+    {
+      "id": "2292i8u0likthu8e",
+      "type": "income",
+      "name": "fgdfb",
+      "sum": 6000,
+      "account_id": "2292i4qkliktgpot",
+      "user_id": "2292ifuwliks4wi5",
+      "created_at": "2023-06-06T21:53:12.781Z"
     }
   ]
 }

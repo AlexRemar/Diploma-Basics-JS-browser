@@ -3,11 +3,6 @@
  * кнопки скрытия/показа колонки в мобильной версии сайта
  * и за кнопки меню
  * */
-const sidebarToggle = document.querySelector('.sidebar-toggle');
-const sidebarMini = document.querySelector('.sidebar-mini');
-const registerButton = document.querySelector('.menu-item_register');
-const loginButton = document.querySelector('.menu-item_login');
-const logoutButton = document.querySelector('.menu-item_logout');
 class Sidebar {
   /**
    * Запускает initAuthLinks и initToggleButton
@@ -22,17 +17,13 @@ class Sidebar {
    * переключает два класса для body: sidebar-open и sidebar-collapse
    * при нажатии на кнопку .sidebar-toggle
    * */
-   
   static initToggleButton() {
-    sidebarToggle.addEventListener('click', function(e) {
-      e.preventDefault();
-      if (sidebarMini.classList.contains('sidebar-open', 'sidebar-collapse')) {
-        sidebarMini.classList.remove('sidebar-open', 'sidebar-collapse');
-          return;
-        } 
-        sidebarMini.classList.add('sidebar-open', 'sidebar-collapse');    
-  })
-}
+    const toggleButton = document.querySelector('.sidebar-toggle');
+    toggleButton.addEventListener('click', () => {
+      document.body.classList.toggle('sidebar-open');
+      document.body.classList.toggle('sidebar-collapse');
+    });
+  }
 
   /**
    * При нажатии на кнопку входа, показывает окно входа
@@ -42,20 +33,32 @@ class Sidebar {
    * выходу устанавливает App.setState( 'init' )
    * */
   static initAuthLinks() {
-    loginButton.addEventListener('click', function(e){
-      e.preventDefault();
+    const login = document.querySelector('.menu-item_login');
+    login.addEventListener('click', () => {
       App.getModal('login').open();
-    });
-    registerButton.addEventListener('click', function(e){
-      e.preventDefault();
+  });
+  const register = document.querySelector('.menu-item_register');
+  register.addEventListener('click', () => {
       App.getModal('register').open();
+  });
+  const logout = document.querySelector('.menu-item_logout');
+  logout.addEventListener('click', () => {
+    User.logout((err, response) => {
+      if (err) {
+        return;
+      }
+
+      if (!response.success) {
+        return;
+      }
+
+      App.setState('init');
     });
-    logoutButton.addEventListener('click', function(e){
-      e.preventDefault();
-      User.logout(response, function(){
-        if (response.success)
-          App.setState('init'); 
-      });
-    });
-  }
+  });
 }
+}
+
+
+
+
+

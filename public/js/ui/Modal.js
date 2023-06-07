@@ -4,8 +4,6 @@
  * В первую очередь это открытие или
  * закрытие имеющихся окон
  * */
-const closeEl = document.querySelectorAll('[data-dismiss="modal"]');
-
 class Modal {
   /**
    * Устанавливает текущий элемент в свойство element
@@ -14,13 +12,12 @@ class Modal {
    * необходимо выкинуть ошибку.
    * */
   constructor(element){
-    if(!element){
-      throw new Error('Error');
+    if (!element) {
+      throw new Error(error);
     }
     this.element = element;
     this.registerEvents();
   }
-
 
   /**
    * При нажатии на элемент с data-dismiss="modal"
@@ -28,11 +25,10 @@ class Modal {
    * (с помощью метода Modal.onClose)
    * */
   registerEvents() {
-    for(let a of closeEl){
-      a.onclick = function(){
-        this.onClose;
-      }
-    }
+    const closeButtons = [...document.querySelectorAll('[data-dismiss="modal"]')];
+    closeButtons.forEach((closeBtn) => {
+      closeBtn.addEventListener('click', (e) => this.onClose(e));
+    });
   }
 
   /**
@@ -40,22 +36,20 @@ class Modal {
    * Закрывает текущее окно (Modal.close())
    * */
   onClose(e) {
-    this.close();
     e.preventDefault();
+    this.close();
   }
-  
   /**
    * Открывает окно: устанавливает CSS-свойство display
    * со значением «block»
    * */
   open() {
-    this.element.style.display = 'block'
+    this.element.style.display = 'block';
   }
   /**
    * Закрывает окно: удаляет CSS-свойство display
    * */
   close(){
-      this.element.style.removeProperty('display');
+    this.element.style.display = '';
   }
 }
-

@@ -3,10 +3,7 @@
  * отображения счетов в боковой колонке
  * */
 
-
-
 class AccountsWidget {
-  
   /**
    * Устанавливает текущий элемент в свойство element
    * Регистрирует обработчики событий с помощью
@@ -16,11 +13,12 @@ class AccountsWidget {
    * Если переданный элемент не существует,
    * необходимо выкинуть ошибку.
    * */
-  constructor(element) {
-    if(!element){
-      throw new Error('Error');
+  constructor( element ) {
+    if (!element) {
+      throw new Error(error);
     }
     this.element = element;
+    this.selectedAccount = null;
     this.registerEvents();
     this.update();
   }
@@ -33,16 +31,14 @@ class AccountsWidget {
    * вызывает AccountsWidget.onSelectAccount()
    * */
   registerEvents() {
-    const createAccount = this.element.querySelector('.create-account')
-    createAccount.addEventListener('click', function(e){
-      e.preventDefault();
-      App.getModal('newAccount').open();
+    const createAccount = document.querySelector('.create-account');
+    if (createAccount) {
+      createAccount.addEventListener('click', () => App.getModal('createAccount').open());
+    }
+    const accounts = [...this.element.querySelectorAll('.account')];
+    accounts.forEach((item) => {
+      item.addEventListener('click', () => this.onSelectAccount(item));
     });
-    for(let account of this.element.querySelectorAll('.account'))
-    account.querySelector('a').addEventListener('click', function(e){
-      e.preventDefault();
-      this.onSelectAccount(account)
-    })
   }
 
   /**
@@ -55,19 +51,22 @@ class AccountsWidget {
    * Отображает список полученных счетов с помощью
    * метода renderItem()
    * */
-
   update() {
-    if(User.current()){
-      Account.list(id, function(err,response){
-        if(err){
-          alert(JSON.stringify(err))
-        }
-        if (response.success){
-          this.clear();
-        } 
-        this.renderItem() 
-      });
+    const currentUser = User.current();
+    if (!currentUser) {
+      return;
     }
+    Account.list({}, (error, response) => {
+      if (error) {
+        throw new Error(error);
+      }
+      if (!response.success || response.data.length === 0) {
+        return;
+      }
+      this.clear();
+      response.data.forEach(account => this.renderItem(account));
+      this.registerEvents()
+    });
   }
 
   /**
@@ -76,9 +75,8 @@ class AccountsWidget {
    * в боковой колонке
    * */
   clear() {
-    for (const account of this.element.querySelectorAll('.account')){
-      account.remove()
-    }
+    const accounts = [...this.element.querySelectorAll('.account')];
+    accounts.forEach(acc => acc.remove());
   }
 
   /**
@@ -89,13 +87,12 @@ class AccountsWidget {
    * Вызывает App.showPage( 'transactions', { account_id: id_счёта });
    * */
   onSelectAccount(element) {
-    const previousElement = this.element.querySelector('.active')
-    if(previousElement){
-      previousElement.classList.remove('active');
-      element.classList.add('active')
+    if (this.selectedAccount) {
+      this.selectedAccount.classList.remove('active');
     }
-
-    App.showPage('transactions', {account_id: element.dataset.id})
+    element.classList.add('active');
+    this.selectedAccount = element;
+    App.showPage( 'transactions', { account_id: element.dataset.id });
   }
 
   /**
@@ -104,12 +101,14 @@ class AccountsWidget {
    * item - объект с данными о счёте
    * */
   getAccountHTML(item){
-    return `<li class="active account" data-id="${item.id}">
-      <a href="#">
-        <span>${item.name}</span> /
-        <span>${item.sum}</span>
-      </a>
-        </li>`
+    return `
+      <li class="account" data-id="${item.id}">
+        <a href="#">
+            <span>${item.name}</span> /
+            <span>${item.sum} ₽</span>
+        </a>
+      </li>
+    `;
   }
 
   /**
@@ -119,12 +118,7 @@ class AccountsWidget {
    * и добавляет его внутрь элемента виджета
    * */
   renderItem(data){
-    const container = document.createElement('div')
-    container.innerHTML = this.getAccountHTML(item);
-
-    // Не могу понять как получить массив с информацией о счетах
-
-
-    //this.element.appendChild()
+    this.element.insertAdjacentHTML('beforeend', this.getAccountHTML(data));
   }
 }
+
