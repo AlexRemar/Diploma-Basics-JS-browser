@@ -133,6 +133,7 @@ class TransactionsPage {
   clear() {
     this.renderTransactions([]);
     this.renderTitle('Название счёта');
+    this.lastOptions = null;
   }
 
   /**
@@ -201,5 +202,6 @@ class TransactionsPage {
       return;
     }
     this.content.innerHTML = data.reduce((acc, item) => acc + this.getTransactionHTML(item), '');
+    this.registerEvents()
   }
 }
