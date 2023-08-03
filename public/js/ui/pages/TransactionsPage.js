@@ -35,10 +35,10 @@ class TransactionsPage {
    * */
   registerEvents() {
     const deleteAccount = [...this.element.querySelectorAll('.remove-account')];
-    deleteAccount.forEach((btn) => btn.addEventListener('click', () => this.removeAccount()));
+    deleteAccount.forEach((btn) => btn.addEventListener('click', () => this.removeAccount(btn.dataset.account_id)));
     
     const deleteTransaction = [...this.content.querySelectorAll('.transaction__remove')];
-    deleteTransaction.forEach((btn) => btn.addEventListener('click', () => this.removeTransaction()));
+    deleteTransaction.forEach((btn) => btn.addEventListener('click', () => this.removeTransaction(btn.dataset.id)));
   }
   
 
